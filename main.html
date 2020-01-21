@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>D3</title>
+    <link rel="icon" href="src/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid.css">
+</head>
+<body>
+<header class="menu-panel">
+    <ul class="main-menu">
+        <li class="menu_item">
+            <a href="https://d3js.org/" target="_blank">
+                <img class="logo" alt="Логотип D3" src="src/d3_logo.png">
+            </a>
+        </li>
+        <!--<li class="menu_item">
+            <button class="button btn_clear">Очистить</button>
+        </li>-->
+        <li class="menu_item">
+            <a class="btn_save">
+                <button class="button" disabled>Сохранить</button>
+            </a>
+        </li>
+        <li class="menu_item">
+            <button class="button btn_theme">Тема</button>
+        </li>
+        <li class="menu_item">
+            <div class="count_for_task"></div>
+        </li>
+    </ul>
+</header>
+
+<main>
+    <div class="container">
+        <div class="workspace">
+            <div class="workspace_item">
+                <div class="tabs">
+                    <input type="radio" name="inset" value="" id="tab_1">
+                    <label class="label_1" for="tab_1">Script</label>
+
+                    <input type="radio" name="inset" value="" id="tab_2" checked>
+                    <label for="tab_2">Входные данные</label>
+
+                    <div id="txt_1">
+                        <div class="js-editor"></div>
+                    </div>
+                    <div id="txt_2">
+                        <div class="js-inputs"></div>
+                    </div>
+                </div>
+                <div class="current_task">
+                    <div class="current_task_main">
+                    </div>
+                </div>
+            </div>
+            <div class="workspace_item">
+                <div class="js-frame">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="task task_close">
+    <div class="modal">
+        <div class="main-task">
+            <p>
+                Вы научились рисовать спираль с помощью d3.js. Теперь можете взглянуть на код еще раз и попробовать изменять значения.
+                Замечайте, как изменяется рисунок в зависимости от того или иного параметра.
+            </p>
+        </div>
+        <button class="button btn_task_close">Закрыть</button>
+    </div>
+</div>
+
+<div class="overlay task_close"></div>
+
+<script src="lib/ace-src/ace.js"></script>
+<script src="js/initial_data.js"></script>
+<script src="js/tasks_main.js"></script>
+<script src="js/editor.js"></script>
+<script src="js/buttons.js"></script>
+</body>
+</html>
